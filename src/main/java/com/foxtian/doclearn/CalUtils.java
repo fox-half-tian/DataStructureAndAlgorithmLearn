@@ -12,10 +12,7 @@ import java.util.stream.Collectors;
  */
 public class CalUtils {
 
-    /**
-     * 默认数量为 {@value b}
-     */
-    public int a = 10;
-
-    public int b = 20;
+    public static void main(String[] args) {
+        int[] ints = new int[Integer.MAX_VALUE];
+    }
 }
