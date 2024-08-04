@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @Create 2024/7/30 23:42
  * @Version 1.0
  */
-public class TestBinarySearch {
+public class BinarySearchTest {
     /**
      * {@link BinarySearch#binarySearchBasic(int[], int)} 二分查找基础版
      */
