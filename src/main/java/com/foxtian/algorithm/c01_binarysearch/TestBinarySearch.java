@@ -1,6 +1,6 @@
-package com.foxtian.algorithm.c1_binarysearch;
+package com.foxtian.algorithm.c01_binarysearch;
 
-import com.foxtian.Utils.ArrayShowUtils;
+import com.foxtian.utils.ArrayShowUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @Create 2024/7/30 23:42
  * @Version 1.0
  */
-public class BinarySearchTest {
+public class TestBinarySearch {
     /**
      * {@link BinarySearch#binarySearchBasic(int[], int)} 二分查找基础版
      */

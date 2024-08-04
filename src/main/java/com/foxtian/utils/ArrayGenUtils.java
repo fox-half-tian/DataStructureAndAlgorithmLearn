@@ -1,4 +1,4 @@
-package com.foxtian.Utils;
+package com.foxtian.utils;
 
 import java.util.Arrays;
 import java.util.Random;

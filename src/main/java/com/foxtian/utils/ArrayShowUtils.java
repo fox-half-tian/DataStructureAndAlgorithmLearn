@@ -1,4 +1,4 @@
-package com.foxtian.Utils;
+package com.foxtian.utils;
 
 /**
  * Description:

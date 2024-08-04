@@ -1,4 +1,4 @@
-package com.foxtian.algorithm.c1_binarysearch;
+package com.foxtian.algorithm.c01_binarysearch;
 
 /**
  * Description:
@@ -11,8 +11,8 @@ public class BinarySearch {
     /**
      * 二分查找基础版
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchBasicTest()}</p>
-     * <p>数据溢出问题测试案例查看 {@link BinarySearchTest#binarySearchBasicNumFlowTest()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchBasicTest()}</p>
+     * <p>数据溢出问题测试案例查看 {@link TestBinarySearch#binarySearchBasicNumFlowTest()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -39,7 +39,7 @@ public class BinarySearch {
     /**
      * 二分查找改动版1，解决 {@code (i + j)} 数据溢出的问题
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchPlus1Test()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchPlus1Test()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -67,7 +67,7 @@ public class BinarySearch {
     /**
      * 二分查找改动版2，左闭右开区间
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchPlus2Test()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchPlus2Test()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -98,7 +98,7 @@ public class BinarySearch {
     /**
      * 二分查找平衡版，左闭右开区间
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchBalanceTest()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchBalanceTest()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -125,7 +125,7 @@ public class BinarySearch {
     /**
      * 二分查找 Leftmost
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchLeftmost1Test()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchLeftmost1Test()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -153,7 +153,7 @@ public class BinarySearch {
     /**
      * 二分查找 Rightmost
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchRightmost1Test()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchRightmost1Test()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -180,7 +180,7 @@ public class BinarySearch {
     /**
      * 二分查找 Leftmost
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchLeftmost2Test()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchLeftmost2Test()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
@@ -203,7 +203,7 @@ public class BinarySearch {
     /**
      * 二分查找 Rightmost
      * <p/>
-     * <p>测试案例查看 {@link BinarySearchTest#binarySearchRightmost2Test()}</p>
+     * <p>测试案例查看 {@link TestBinarySearch#binarySearchRightmost2Test()}</p>
      *
      * @param arr    待查找的升序数组
      * @param target 待查找的目标值
