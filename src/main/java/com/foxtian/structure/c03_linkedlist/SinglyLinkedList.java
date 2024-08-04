@@ -61,6 +61,23 @@ public class SinglyLinkedList implements Iterable<Integer> {
     }
 
     /**
+     * 递归遍历
+     *
+     * @param consumer 待执行操作
+     */
+    public void foreach3(Consumer<Integer> consumer) {
+        recursion(head, consumer);
+    }
+
+    public void recursion(Node node, Consumer<Integer> consumer) {
+        if (node == null) {
+            return;
+        }
+        consumer.accept(node.value);
+        recursion(node.next, consumer);
+    }
+
+    /**
      * 查找最后一个节点
      *
      * @return 最后一个节点
