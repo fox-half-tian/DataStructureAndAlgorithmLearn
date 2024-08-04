@@ -1,5 +1,7 @@
 package com.foxtian.structure.c03_linkedlist;
 
+import com.sun.tools.javac.util.Assert;
+
 import java.util.Iterator;
 import java.util.function.Consumer;
 
@@ -139,7 +141,7 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
         if (head == null) {
             throw new IllegalArgumentException(String.format("index [%d] 不合法", 0));
         }
-        head = head.next;
+        remove(0);
     }
 
     /**
