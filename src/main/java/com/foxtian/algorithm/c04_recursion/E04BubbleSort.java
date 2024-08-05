@@ -25,19 +25,15 @@ public class E04BubbleSort {
             return;
         }
 
-        boolean happenSwap = false;
+        int x = 0;
         for (int i = 0; i < right; i++) {
             if (arr[i] > arr[i + 1]) {
-                happenSwap = true;
+                x = i;
                 swap(arr, i, i + 1);
             }
         }
 
-        if (!happenSwap) {
-            return;
-        }
-
-        recursion(arr, right - 1);
+        recursion(arr, x);
     }
 
     private static void swap(int[] arr, int i, int j) {
