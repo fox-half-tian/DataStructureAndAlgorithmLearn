@@ -15,7 +15,7 @@ public class E09Leetcode234 {
         int i = 0;
         int j = length - 1;
         while (i < j) {
-            if(getNodeValByIndex(head, i) != getNodeValByIndex(head, j)) {
+            if (getNodeValByIndex(head, i) != getNodeValByIndex(head, j)) {
                 return false;
             }
             i++;
@@ -34,7 +34,7 @@ public class E09Leetcode234 {
     }
 
     private static int getNodeValByIndex(ListNode head, int index) {
-        while(index > 0) {
+        while (index > 0) {
             head = head.next;
             index--;
         }
@@ -84,6 +84,27 @@ public class E09Leetcode234 {
         return p1;
     }
 
+    // 方法三：查找靠右的中间节点，并反转前半个链表
+    public static boolean isPalindrome3(ListNode head) {
+        ListNode p1 = head;
+        ListNode p2 = head;
+        ListNode newHead = null;
+        ListNode oldHead = head;
+        while (p2 != null && p2.next != null) {
+            p1 = p1.next;
+            p2 = p2.next.next;
+
+            oldHead.next = newHead;
+            newHead = oldHead;
+            oldHead = p1;
+        }
+        // 处理奇数节点
+        if (p2 != null) {
+            p1 = p1.next;
+        }
+        return compareEqual(newHead, p1);
+    }
+
     public static void main(String[] args) {
         ListNode node1_2 = new ListNode(1, null);
         ListNode node2_2 = new ListNode(2, node1_2);
@@ -91,7 +112,7 @@ public class E09Leetcode234 {
         ListNode node1 = new ListNode(1, node2_1);
 
         print(node1);
-        boolean flag = isPalindrome2(node1);
+        boolean flag = isPalindrome3(node1);
         System.out.println("flag = " + flag);
     }
 
