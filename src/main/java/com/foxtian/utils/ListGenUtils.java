@@ -13,8 +13,6 @@ import java.util.List;
  */
 public class ListGenUtils {
     public static <E> List<E> toList(E... items) {
-        ArrayList<E> list = new ArrayList<>(items.length);
-        list.addAll(Arrays.asList(items));
-        return list;
+        return Arrays.asList(items);
     }
 }

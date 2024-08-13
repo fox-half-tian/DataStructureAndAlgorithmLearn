@@ -22,7 +22,7 @@ public class Person {
 
     public static void main(String[] args) {
         int[] person = new int[10];
-        person[1] =10;
+        person[1] = 10;
     }
 
     class B {
@@ -31,11 +31,15 @@ public class Person {
 }
 
 class B {
-    public static void main(String[] args) throws ClassNotFoundException {
-        // Class<?> aClass1 = Class.forName("com.foxtian.doclearn.Person");
-        // Class<?> aClass = ClassLoader.getSystemClassLoader().loadClass("com.foxtian.doclearn.Person");
-        Class<Person> personClass = Person.class;
-        System.out.println(personClass.getName());
-        Method[] methods = personClass.getMethods();
+    public static void main(String[] args) {
+        System.out.println(f(2)); // 3
+    }
+
+    public static int f(int value) {
+        try {
+            return ++value;
+        } finally {
+            value += 100;
+        }
     }
 }
