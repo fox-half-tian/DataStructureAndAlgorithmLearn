@@ -1,6 +1,5 @@
 package com.foxtian.structure.c06_stack.exec;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
