@@ -17,26 +17,27 @@ public class PriorityQueue2<E extends Priority> implements Queue<E> {
         this.array = new Priority[capacity];
     }
 
-    // O(n) 插入排序的思想
+    // O(n)
     @Override
     public boolean offer(E value) {
         if (isFull()) {
             return false;
         }
 
+        insert(value);
+        return true;
+    }
+
+    // 插入排序的代码
+    private void insert(E value) {
         int i = size - 1;
         int p = value.priority();
-        while (i >= 0) {
-            if (array[i].priority() >= p) {
-                array[i + 1] = array[i];
-            } else {
-                break;
-            }
+        while (i >= 0 && array[i].priority() >= p) {
+            array[i + 1] = array[i];
             i--;
         }
         array[i + 1] = value;
         size++;
-        return true;
     }
 
     // O(1)
