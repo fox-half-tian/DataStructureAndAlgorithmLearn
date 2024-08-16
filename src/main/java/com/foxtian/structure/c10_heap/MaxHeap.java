@@ -12,17 +12,26 @@ import com.sun.glass.ui.Size;
  */
 public class MaxHeap {
 
-    private final Integer[] array;
+    /**
+     * 数组存储完全二叉树
+     * <p>第 i 个节点的孩子节点：</p>
+     * <ul>
+     *     <li>左孩子：2 * i + 1</li>
+     *     <li>右孩子：2 * i + 2</li>
+     * </ul>
+     */
+    private final int[] array;
 
     private int size;
 
     public MaxHeap(int capacity) {
-        this.array = new Integer[capacity];
+        this.array = new int[capacity];
     }
 
-    public MaxHeap(Integer[] array) {
+    public MaxHeap(int[] array) {
         this.array = array;
         this.size = array.length;
+        heapify();
     }
 
     /**
@@ -67,9 +76,9 @@ public class MaxHeap {
         return size == array.length;
     }
 
-    public Integer peek() {
+    public int peek() {
         if (isEmpty()) {
-            return null;
+            throw new RuntimeException("堆空");
         }
         return array[0];
     }
@@ -79,7 +88,7 @@ public class MaxHeap {
      *
      * @return
      */
-    public Integer poll() {
+    public int poll() {
         return poll(0);
     }
 
@@ -88,14 +97,14 @@ public class MaxHeap {
      *
      * @return
      */
-    public Integer poll(int index) {
+    public int poll(int index) {
         if (index >= size) {
-            return null;
+            throw new RuntimeException("堆空");
         }
 
         swap(index, array[--size]);
-        Integer removed = array[size];
-        array[size] = null;
+        int removed = array[size];
+        // array[size] = null;
         down(index);
         return removed;
     }
@@ -105,12 +114,12 @@ public class MaxHeap {
      *
      * @param replaced
      */
-    public void replace(Integer replaced) {
+    public void replace(int replaced) {
         array[0] = replaced;
         down(0);
     }
 
-    public boolean offer(Integer offered) {
+    public boolean offer(int offered) {
         if (isFull()) {
             return false;
         }
@@ -124,7 +133,7 @@ public class MaxHeap {
      *
      * @param offered
      */
-    private void up(Integer offered) {
+    private void up(int offered) {
         int child = size++;
         int parent = (child - 1) >> 1;
         while (child > 0 && offered > array[parent]) {
