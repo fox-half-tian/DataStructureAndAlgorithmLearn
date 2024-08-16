@@ -1,6 +1,6 @@
 package com.foxtian.structure.c02_array;
 
-import com.foxtian.utils.StopWatch;
+import com.foxtian.utils.Stopwatch;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -16,7 +16,7 @@ public class CacheLineTest {
         int rows = 1_000_000;
         int columns = 14;
         int[][] arr = new int[rows][columns];
-        StopWatch sw = new StopWatch();
+        Stopwatch sw = new Stopwatch();
         sw.start("ij");
         ij(arr);
         sw.stop("ij");

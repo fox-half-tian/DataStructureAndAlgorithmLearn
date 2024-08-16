@@ -10,13 +10,13 @@ import java.util.UUID;
  * @Create 2024/8/3 17:29
  * @Version 1.0
  */
-public class StopWatch {
+public class Stopwatch {
 
     private final HashMap<String, Task> tasks;
 
     private final String defaultTaskName;
 
-    public StopWatch() {
+    public Stopwatch() {
         tasks = new HashMap<>();
         defaultTaskName = UUID.randomUUID().toString();
         tasks.put(defaultTaskName, new Task());

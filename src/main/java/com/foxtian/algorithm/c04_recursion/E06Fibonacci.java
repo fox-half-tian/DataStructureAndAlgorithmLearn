@@ -1,6 +1,6 @@
 package com.foxtian.algorithm.c04_recursion;
 
-import com.foxtian.utils.StopWatch;
+import com.foxtian.utils.Stopwatch;
 
 /**
  * Description: 递归斐波那契第 n 项
@@ -11,7 +11,7 @@ import com.foxtian.utils.StopWatch;
  */
 public class E06Fibonacci {
     public static void main(String[] args) throws InterruptedException {
-        StopWatch sw = new StopWatch();
+        Stopwatch sw = new Stopwatch();
         Thread t1 = new Thread(() -> {
             sw.start("f1");
             long v1 = f1(50);
