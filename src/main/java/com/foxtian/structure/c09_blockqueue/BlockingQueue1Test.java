@@ -1,7 +1,6 @@
 package com.foxtian.structure.c09_blockqueue;
 
 import com.foxtian.utils.ForeachUtils;
-import org.junit.jupiter.api.Test;
 
 /**
  * Description:
@@ -10,9 +9,9 @@ import org.junit.jupiter.api.Test;
  * @Create 2024/8/16 20:08
  * @Version 1.0
  */
-public class BlockingQueueImplTest {
+public class BlockingQueue1Test {
     public static void main(String[] args) throws InterruptedException {
-        BlockingQueueImpl<String> blockingQueue = new BlockingQueueImpl<String>(3);
+        BlockingQueue1<String> blockingQueue = new BlockingQueue1<String>(3);
         Thread t1 = new Thread(() -> {
             try {
                 System.out.println(System.currentTimeMillis() + " begin");

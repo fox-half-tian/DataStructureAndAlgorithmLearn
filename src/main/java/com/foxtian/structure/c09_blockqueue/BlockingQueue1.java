@@ -12,14 +12,14 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Create 2024/8/16 19:54
  * @Version 1.0
  */
-public class BlockingQueueImpl<E> implements BlockingQueue<E>, Iterable<E> {
+public class BlockingQueue1<E> implements BlockingQueue<E>, Iterable<E> {
 
     private final E[] array;
     private int head;
     private int tail;
     private int size;
 
-    public BlockingQueueImpl(int capacity) {
+    public BlockingQueue1(int capacity) {
         this.array = (E[]) new Object[capacity];
     }
 
@@ -106,7 +106,7 @@ public class BlockingQueueImpl<E> implements BlockingQueue<E>, Iterable<E> {
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
-            private int size = BlockingQueueImpl.this.size;
+            private int size = BlockingQueue1.this.size;
             private int p = head;
 
             @Override
