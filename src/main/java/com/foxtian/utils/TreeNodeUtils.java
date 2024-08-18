@@ -65,6 +65,9 @@ public class TreeNodeUtils {
                     list.add(poll.val);
                     queue.offer(poll.left);
                     queue.offer(poll.right);
+                    if (poll.left != null || poll.right != null) {
+                        allNull = false;
+                    }
                 }
                 count--;
             }
