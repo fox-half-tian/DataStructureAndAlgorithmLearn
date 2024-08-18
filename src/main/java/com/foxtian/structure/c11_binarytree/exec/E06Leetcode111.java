@@ -1,7 +1,7 @@
 package com.foxtian.structure.c11_binarytree.exec;
 
 import com.foxtian.entity.TreeNode;
-import com.foxtian.utils.TreeNodeGenUtils;
+import com.foxtian.utils.TreeNodeUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -36,7 +36,7 @@ public class E06Leetcode111 {
 
     @Test
     public void testMinDepth1() {
-        TreeNode root = TreeNodeGenUtils.genByLevelArray(new Integer[]{3, 9, 20, null, null, 15, 7});
+        TreeNode root = TreeNodeUtils.arrayToTreeNode(new Integer[]{3, 9, 20, null, null, 15, 7});
         assertEquals(2, minDepth1(root));
     }
 
@@ -50,6 +50,7 @@ public class E06Leetcode111 {
         queue.offer(root);
         while (!queue.isEmpty()) {
             int count = queue.size();
+            depth++;
             while (count > 0) {
                 TreeNode poll = queue.poll();
                 if (poll.left == null && poll.right == null) {
@@ -63,14 +64,14 @@ public class E06Leetcode111 {
                 }
                 count--;
             }
-            depth++;
         }
 
         return depth;
     }
+
     @Test
     public void testMinDepth2() {
-        TreeNode root = TreeNodeGenUtils.genByLevelArray(new Integer[]{3, 9, 20, null, null, 15, 7});
+        TreeNode root = TreeNodeUtils.arrayToTreeNode(new Integer[]{3, 9, 20, null, null, 15, 7});
         assertEquals(2, minDepth2(root));
     }
 
