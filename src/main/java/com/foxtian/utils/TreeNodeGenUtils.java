@@ -17,7 +17,7 @@ public class TreeNodeGenUtils {
 
         TreeNode[] nodes = new TreeNode[array.length];
         for (int i = nodes.length - 1; i >= 0; i--) {
-            if (nodes[i] == null) {
+            if (array[i] == null) {
                 continue;
             }
 
