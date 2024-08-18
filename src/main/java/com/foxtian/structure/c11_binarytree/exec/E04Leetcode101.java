@@ -33,6 +33,13 @@ public class E04Leetcode101 {
 
     @Test
     public void testIsSymmetric() {
+        /*
+                    1
+                   / \
+                  2   2
+                 / \ / \
+                3  4 4  3
+         */
         TreeNode root1 = new TreeNode(
                 1,
                 new TreeNode(2, new TreeNode(3), new TreeNode(4)),
@@ -40,6 +47,13 @@ public class E04Leetcode101 {
         );
         assertTrue(isSymmetric(root1));
 
+        /*
+                    1
+                   / \
+                  2   2
+                   \   \
+                   3    3
+         */
         TreeNode root2 = new TreeNode(
                 1,
                 new TreeNode(2, null, new TreeNode(3)),
