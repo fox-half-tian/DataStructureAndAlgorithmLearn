@@ -1,6 +1,7 @@
 package com.foxtian.doclearn;
 
 import java.lang.reflect.Method;
+import java.util.concurrent.*;
 
 /**
  * Description:
@@ -31,8 +32,18 @@ public class Person {
 }
 
 class B {
-    public static void main(String[] args) {
-        System.out.println(f(2)); // 3
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(10, 10, 10, TimeUnit.MINUTES, new ArrayBlockingQueue<>(10));
+        Future<?> future = poolExecutor.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("hihi");
+            }
+        });
+
+        Object o = future.get();
+        System.out.println(o);
+        System.out.println(future);
     }
 
     public static int f(int value) {
@@ -43,3 +54,4 @@ class B {
         }
     }
 }
+
