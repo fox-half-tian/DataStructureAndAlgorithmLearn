@@ -10,6 +10,7 @@ import com.foxtian.entity.TreeNode;
  * @Version 1.0
  */
 public class E03Leetcode700 {
+    // 迭代
     public static TreeNode searchBST1(TreeNode root, int val) {
         TreeNode p = root;
         while (p != null) {
@@ -24,6 +25,7 @@ public class E03Leetcode700 {
         return p;
     }
 
+    // 递归
     public static TreeNode searchBST2(TreeNode node, int val) {
         if(node == null) {
             return null;
