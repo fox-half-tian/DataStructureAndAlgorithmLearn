@@ -83,4 +83,41 @@ public class E01Leetcode450 {
             parent.right = child;
         }
     }
+
+    // 递归实现
+    public TreeNode deleteNode2(TreeNode node, int key) {
+        if (node == null) {
+            return null;
+        }
+
+        if (key < node.val) {
+            node.left = deleteNode(node.left, key);
+            return node;
+        }
+
+        if (node.val < key) {
+            node.right = deleteNode(node.right, key);
+            return node;
+        }
+
+        if (node.left == null) {
+            return node.right;
+        }
+
+        if (node.right == null) {
+            return node.left;
+        }
+
+        // 被删除节点有左右两棵子树
+        // 找后继节点
+        TreeNode s = node.right;
+        while (s.left != null) {
+            s = s.left;
+        }
+
+        s.right = deleteNode(node.right, s.val);
+        s.left = node.left;
+
+        return s;
+    }
 }
