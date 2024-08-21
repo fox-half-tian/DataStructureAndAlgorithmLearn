@@ -9,7 +9,7 @@ import java.util.HashMap;
  * @Create 2024/8/21 22:18
  * @Version 1.0
  */
-public class E01leetcode1 {
+public class E01Leetcode1 {
     public int[] twoSum1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {

@@ -11,7 +11,7 @@ import java.util.Map;
  * @Create 2024/8/21 22:31
  * @Version 1.0
  */
-public class E02leetcode3 {
+public class E02Leetcode3 {
     // 哈希表实现
     public int lengthOfLongestSubstring(String s) {
         int begin = 0;
