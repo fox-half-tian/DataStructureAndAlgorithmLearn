@@ -1,4 +1,4 @@
-package com.foxtian.algorithm.sort.selectsort;
+package com.foxtian.algorithm.c17_sort.s02_selectsort;
 
 /**
  * Description: 递归版本选择排序

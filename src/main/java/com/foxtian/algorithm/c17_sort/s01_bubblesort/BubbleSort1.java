@@ -1,4 +1,4 @@
-package com.foxtian.algorithm.sort.bubblesort;
+package com.foxtian.algorithm.c17_sort.s01_bubblesort;
 
 /**
  * Description: 递归版本冒泡排序
