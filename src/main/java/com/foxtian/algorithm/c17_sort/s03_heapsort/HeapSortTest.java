@@ -1,7 +1,5 @@
-package com.foxtian.algorithm.c17_sort.s_03heapsort;
+package com.foxtian.algorithm.c17_sort.s03_heapsort;
 
-import com.foxtian.algorithm.c17_sort.s02_selectsort.SelectionSort1;
-import com.foxtian.algorithm.c17_sort.s02_selectsort.SelectionSort2;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

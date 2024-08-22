@@ -1,4 +1,4 @@
-package com.foxtian.algorithm.c17_sort.s_03heapsort;
+package com.foxtian.algorithm.c17_sort.s03_heapsort;
 
 /**
  * Description: 堆排序，这里使用大顶堆
