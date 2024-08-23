@@ -1,6 +1,9 @@
 package com.foxtian.doclearn;
 
 import java.lang.reflect.Field;
+import java.util.Hashtable;
+import java.util.LinkedHashSet;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Description:
@@ -11,13 +14,7 @@ import java.lang.reflect.Field;
  */
 public class RealTypeTest {
     public static void main(String[] args) throws NoSuchFieldException {
-        A<String> a = new A<>();
-
-        Field objField = A.class.getDeclaredField("obj");
-        System.out.println(objField.getType().getName());
-    }
-
-    static class A<E> {
-        E obj;
+        ReentrantLock lock = new ReentrantLock();
+        boolean b = lock.tryLock();
     }
 }
