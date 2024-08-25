@@ -14,8 +14,6 @@ public class Catalan {
         dp[1] = 1;
 
         for (int j = 2; j <= n; j++) {
-            // j = 4
-            // (0, 3) (1, 2) (2, 1) (3, 0)
             for (int l = 0; l < j; l++) { // l 表示左边节点个数
                 int r = j - l - 1; // r 表示右边节点个数
                 dp[j] += dp[l] * dp[r];
