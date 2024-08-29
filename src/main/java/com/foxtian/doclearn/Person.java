@@ -32,25 +32,37 @@ public class Person {
 }
 
 class B {
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(10, 10, 10, TimeUnit.MINUTES, new ArrayBlockingQueue<>(10));
-        Future<?> future = poolExecutor.submit(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("hihi");
-            }
-        });
-
-        Object o = future.get();
-        System.out.println(o);
-        System.out.println(future);
+    public static void main(String[] args) {
+        System.out.println(new B().longestPalindrome("babad"));
     }
 
-    public static int f(int value) {
-        try {
-            return ++value;
-        } finally {
-            value += 100;
+    public String longestPalindrome(String s) {
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < s.length(); i++) {
+            spread(chars, i, i);
+            spread(chars, i, i + 1);
+        }
+        return s.substring(left, right + 1);
+    }
+
+    int left;
+    int right;
+
+    private void spread(char[] chars, int left, int right) {
+        while (left >= 0 && right < chars.length
+                && chars[left] == chars[right]) {
+            left--;
+            right++;
+        }
+
+        if (left < 0 || right >= chars.length || chars[left] != chars[right]) {
+            left++;
+            right--;
+        }
+
+        if (this.right - this.left < right - left) {
+            this.left = left;
+            this.right = right;
         }
     }
 }
